@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Sistema de Doação TipsCode</title>
+</head>
+<body>
+    <div>
+        <h1>Escolha o valor que deseja doar</h1>
+        <form name="form">
+            <select name="select">
+                <option value="1">R$50,00 Reais</option>
+                <option value="2">R$100,00 Reais</option>
+                <option value="3">R$200,00 Reais</option>
+                <option value="4">R$500,00 Reais</option>
+                <option value="5">cancelar doação</option>
+            </select>
+        </form>
+        <button type="submit" onclick="doar()">Doar agora</button>
+
+        <span id="msg"></span>
+    </div>
+
+    <script>
+        function doar() {
+            let opcao = parseInt( document.form.select.value )
+            console.log(opcao)
+
+            switch (opcao) {
+                case 1:
+                    document.getElementById('msg').innerHTML = "Parabéns você dou R$50,00"
+                    break
+                case 2:
+                    document.getElementById('msg').innerHTML = "Parabéns você dou R$100,00"
+                    break
+                case 3:
+                    document.getElementById('msg').innerHTML = "Parabéns você dou R$200,00"
+                    break
+                case 4:
+                    document.getElementById('msg').innerHTML = "Parabéns você dou R$500,00"
+                    break
+                default: 
+                    document.getElementById('msg').innerHTML = "doação cancelada"
+                    break
+
+            }
+        }
+    </script>
+</body>
+</html>

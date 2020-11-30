@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Qual sua Idade ? </title>
+</head>
+<body>
+    <div>
+        <label> Informe sua Massa (Kg):</label>
+        <input type="text" id="massa" />
+        <br /> <br />
+
+        <label> Informe sua Altura (m):</label>
+        <input type="text" id="altura" />
+
+        <button type="submit" onclick="calcularImc()"> Verificar Idade </button>
+
+        <br />
+        <span id="msg"></span>
+    </div>
+
+    <script>
+        function calcularImc() {
+            let massa = document.getElementById('massa').value
+            let altura = document.getElementById('altura').value
+
+            console.log(massa, altura)
+
+            let imc = massa / (altura ** 2)
+
+            if ( (imc >= 18.5) && (imc < 24.9) ){
+                document.getElementById('msg').innerHTML = `IMC é de: ${imc.toFixed(2)} Parabéns, seu peso está normal`
+            } else {
+                document.getElementById('msg').innerHTML = `IMC é de: ${imc.toFixed(2)} Seu peso não está normal`
+            }
+        }
+    </script>
+</body>
+</html>

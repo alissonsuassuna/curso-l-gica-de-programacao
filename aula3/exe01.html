@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercício 01</title>
+</head>
+<body>
+    <div>
+        <label for="n1">
+            <input type="text" id="n1" placeholder="digite o primeiro número"/>
+        </label>
+        <label for="n2">
+            <input type="text" id="n2" placeholder="digite o segundo número"/>
+        </label>
+
+        <button onclick="somar()">Calcular</button>
+    </div>
+
+
+    <span id="mostrar"></span>
+
+    <script>
+        function somar() {
+
+            let n1 = parseInt(document.getElementById('n1').value)  
+            let n2 = parseInt(document.getElementById('n2').value) 
+
+            console.log(n1, n2)
+
+            let soma = n1 + n2
+
+            document.getElementById('mostrar').innerHTML = `
+                A soma entre os valores é:  ${soma}`
+        }
+    </script>
+    
+</body>
+</html>

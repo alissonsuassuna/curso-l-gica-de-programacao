@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercício 02</title>
+</head>
+<body>
+    <div>
+        <label for="n1">
+            <input type="text" id="n1" placeholder="digite o primeiro número"/>
+        </label>
+        <label for="n2">
+            <input type="text" id="n2" placeholder="digite o segundo número"/>
+        </label>
+
+        <label for="n3">
+            <input type="text" id="n3" placeholder="digite o terceiro número"/>
+        </label>
+
+        <button onclick="media()">Calcular</button>
+    </div>
+
+
+    <span id="mostrar"></span>
+
+    <script>
+        function media() {
+
+            let n1 = parseInt(document.getElementById('n1').value)  
+            let n2 = parseInt(document.getElementById('n2').value) 
+            let n3 = parseInt(document.getElementById('n3').value) 
+
+            let equilatero = (n1 == n2) && (n2 == n3)
+
+            let escaleno = (n1 !== n2) && (n2 !== n3) && (n1 !== n3)
+
+            document.getElementById('mostrar').innerHTML = `
+                O triângulo é Equilatero?  ${equilatero} </br>
+                O triângulo é Escaleno? ${escaleno}`
+        }
+    </script>
+    
+</body>
+</html>

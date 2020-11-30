@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Lógica de Programação TipsCode - Alisson Suassuna</title>
+</head>
+<body>
+
+   
+        <input type="text" name="valorA" id="valorA" placeholder="Informe o valor A" />
+        <input type="text" name="valorB" id="valorB" placeholder="Informe o valor B" />
+        <input type="text" name="valorC" id="valorC" placeholder="Informe o valor C" />
+        <button onclick="equacao()">Calcular</button>
+  
+
+
+    <script>
+
+        function equacao() {
+            event.preventDefault()
+            let valorA = document.getElementById('valorA').value
+            let valorB = document.getElementById('valorB').value
+            let valorC = document.getElementById('valorC').value
+
+            let delta = parseFloat((valorB * valorB) - 4 * valorA * valorC)
+
+            document.write(`Sua éguação é: ${valorA}x2 + ${valorB} x + ${valorC} = 0`)
+            document.write('</br>')
+
+            document.write(`O valor de delta: ${delta}`)
+
+            console.log(delta)
+        }
+    </script>
+</body>
+</html>

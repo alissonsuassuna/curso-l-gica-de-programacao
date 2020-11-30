@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Entrada de Dados</title>
+</head>
+<body>
+
+    <label for="seu-nome">
+        <input type="text" id="seu-nome" placeholder="digite seu nome"/>
+        <button onclick="prazer()">Enviar</button>
+    </label>
+
+    <span id="mostrar"></span>
+
+    <script>
+        function prazer() {
+
+            let nome = document.getElementById('seu-nome').value 
+
+            console.log(nome)
+
+            document.getElementById('mostrar').innerHTML = `
+                Muito prazer, ${nome}`
+        }
+    </script>
+    
+</body>
+</html>

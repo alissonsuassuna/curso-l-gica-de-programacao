@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <title>Aprovado ou não</title>
+</head>
+<body>
+    <div>
+        <label> Primeira nota</label>
+        <input type="text" id="nota1" />
+        <br /><br />
+        <label> Segunda nota</label>
+        <input type="text" id="nota2" />
+        <br /><br />
+        <button type="submit" onclick="aprovadoOu()">Calcula nota</button>
+    </div>
+
+    <span id="msg"></span>
+
+    <script>
+        function aprovadoOu() {
+            let nota1 = parseFloat(document.getElementById('nota1').value)
+            let nota2 = parseFloat(document.getElementById('nota2').value) 
+
+            let media = (nota1 + nota2) / 2
+
+            document.getElementById('msg').innerHTML = `A média é: ${media}`
+
+            if ( media >= 7 ) {
+                document.getElementById('msg').innerHTML = `Aluno Aprovado`
+            } else if ( (media >= 5) && (media < 7) ) {
+                document.getElementById('msg').innerHTML = `Aluno em Recuperação`
+            } else {
+                document.getElementById('msg').innerHTML = `Reprovado`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Qual sua Idade ? </title>
+</head>
+<body>
+    <div>
+        <label> Informe um número</label>
+        <input type="text" id="n1" />
+        <br /> <br />
+        <button type="submit" onclick="imparOuPar()"> Verificar Número </button>
+
+        <br />
+        <span id="msg"></span>
+    </div>
+
+    <script>
+        function imparOuPar() {
+            let n1 = document.getElementById('n1').value
+
+            console.log(n1)
+
+            // usando SE
+            if ( n1 % 2 == 0 ) {
+                document.getElementById('msg').innerHTML = `
+                   O número ${n1} é PAR
+                `
+            } else {
+                document.getElementById('msg').innerHTML = `
+                   O número ${n1} é ÍMPAR
+                `
+            }
+        }
+    </script>
+</body>
+</html>

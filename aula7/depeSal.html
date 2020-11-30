@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>novo salário</title>
+</head>
+<body>
+    <h1>Calculo do novo salário</h1>
+    <div>
+        <label>Nome completo</label>
+        <input type="text" id="nome" />
+        <br /><br />
+        <label>Salário Atual</label>
+        <input type="text" id="salario" />
+        <br /><br />
+        <label>Quantas pessoa moram com você</label>
+        <input type="text" id="dependentes" />
+        <br /><br />
+
+        <button type="submit" onclick="novoSalario()">Calcular Salario</button>
+    </div>
+
+    <span id="msg"></span>
+
+    <script>
+        function novoSalario(){
+
+            let nome = document.getElementById('nome').value
+            let salario = parseFloat(document.getElementById('salario').value) 
+            let opcao = parseInt(document.getElementById('dependentes').value) 
+            let newSal 
+            switch (opcao) {
+                case 0:
+                    newSal = salario + (salario * 5 / 100)
+                    break;
+                case 1:
+                    newSal = salario + (salario * 10 / 100)
+                    break
+                case 2:
+                    newSal = salario + (salario * 15 / 100)
+                    break
+                case 3:
+                    newSal = salario + (salario * 18 / 100)
+                    break
+                case 4:
+                    newSal = salario + (salario * 20 / 100)
+                    break
+                default:
+                    newSal = salario + (salario * 30 / 100)
+                    break;
+            }
+            document.getElementById('msg').innerHTML = newSal
+        }
+    </script>
+</body>
+</html>
